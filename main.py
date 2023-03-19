@@ -81,30 +81,7 @@ if user_result[0]==0:
 else:
   color = 'red'
 
-
-# Age vs Pregnancies
-st.header('Pregnancy count Graph (Others vs Yours)')
-fig_preg = plt.figure()
-ax1 = sns.scatterplot(x = 'Age', y = 'Pregnancies', data = df, hue = 'Outcome', palette = 'Greens')
-ax2 = sns.scatterplot(x = user_data['Age'], y = user_data['Pregnancies'], s = 150, color = color)
-plt.xticks(np.arange(10,100,5))
-plt.yticks(np.arange(0,20,2))
-plt.title('0 - Healthy & 1 - Unhealthy')
-st.pyplot(fig_preg)
-
-
-
-# Age vs Glucose
-st.header('Glucose Value Graph (Others vs Yours)')
-fig_glucose = plt.figure()
-ax3 = sns.scatterplot(x = 'Age', y = 'Glucose', data = df, hue = 'Outcome' , palette='magma')
-ax4 = sns.scatterplot(x = user_data['Age'], y = user_data['Glucose'], s = 150, color = color)
-plt.xticks(np.arange(10,100,5))
-plt.yticks(np.arange(0,220,10))
-plt.title('0 - Healthy & 1 - Unhealthy')
-st.pyplot(fig_glucose)
-
-
+ 
  
 
 # OUTPUT
